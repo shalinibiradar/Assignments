@@ -1,0 +1,51 @@
+<html>
+
+<body>
+<script>
+
+var Calculator = function()
+{};
+
+Calculator.prototype.sum = function(a,b)
+{
+    return (a+b);
+};
+
+Calculator.prototype.difference = function(a,b)
+{
+    return (a-b);
+};
+
+Calculator.prototype.multiplication = function(a,b)
+{
+    return (a*b);
+};
+
+Calculator.prototype.division = function(a,b)
+{
+    return (a/b);
+};
+
+
+    var calobj = new Calculator();
+
+    var add = (calobj.sum(1,2));
+    var diff = (calobj.difference(1,2));
+    var mult = (calobj.multiplication(1,2));
+    var div = (calobj.division(1,2));
+
+
+console.log("Sum is"+add);
+console.log("Diff is"+diff);
+console.log("Multiplication is"+mult);
+console.log("Division is"+div);
+
+</script>
+
+
+
+</body>
+
+
+
+</html>

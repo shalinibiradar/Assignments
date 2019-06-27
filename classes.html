@@ -1,0 +1,67 @@
+<html>
+<body>
+<script>
+(function(){
+
+    let Calculator = class Calculator2{
+    
+    constructor(paramA,paramB)
+    
+    {
+    this.paramA = paramA
+    this.paramB = paramB
+    }
+    
+    get Sum()
+    {
+    return this.calSum();
+    };
+
+   get diff()
+    {
+        return this.calDiff();
+    }
+
+    get mult()
+    {
+        return this.calMul();
+    }
+
+    get div()
+    {
+        return this.calDiv();
+    }
+    
+    calSum()
+    {
+    return this.paramA+this.paramB
+    };
+
+    calDiff()
+    {
+    return this.paramA-this.paramB
+    };
+
+    calMul()
+    {
+    return this.paramA*this.paramB
+    };
+
+   calDiv()
+    {
+    return this.paramA/this.paramB
+    };
+    
+    }
+
+    console.log(Calculator.name)
+
+    const calObj = new Calculator(10,5);
+    console.log(calObj.Sum)
+    console.log(calObj.diff);
+    console.log(calObj.mult);
+    console.log(calObj.div);
+    })();
+</script>
+</body>
+</html>
