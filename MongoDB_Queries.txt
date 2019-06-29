@@ -1,0 +1,29 @@
+1) few players from different countries and ages.
+
+db.team.insert({name: "Shoib",country: "Pakistan",canBat: true,canBowl: true,isCaptain: true,age: 35})
+db.team.insert({name: "Alex Carey",country: "Australia",canBat: true,canBowl: true,isCaptain: true,age: 28})
+db.team.insert({name: "Kane Willimson",country: "New zealand",canBat: true,canBowl: true,isCaptain: true,age: 31})
+db.team.insert({name: "Eoin Morgan",country: "England",canBat: true,canBowl: true,isCaptain: true,age: 29})
+db.team.insert({name: "M S Doni",country: "India",canBat: true,canBowl: false,isCaptain: true,age: 35})
+db.team.insert({name: "Irfan Patan",country: "India",canBat: false,canBowl: true,isCaptain: true,age: 35})
+db.team.insert({name: "Rohit Sharma",country: "India",canBat: true,canBowl: false,isCaptain: true,age: 35})
+
+
+2) Write a query to find all players who are below 25 or any age group
+
+db.team.find({age:{$lt:30}})
+
+3) Find count of players from any given country
+
+db.team.find({country:"India"}).count()
+
+4) Find count of players who can only bat
+
+db.team.find({canBat:true}).count()
+
+5) Find count of players who can bat from a particular country
+
+db.team.find({country:"India"},{canBat:true}).count()
+
+
+
